@@ -42,4 +42,5 @@ jobs:
           severity: 'CRITICAL,HIGH'
 
       - name: Conftest
+        if: always()
         run: docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace openpolicyagent/conftest test k8s-deployment.yml -p policy/
