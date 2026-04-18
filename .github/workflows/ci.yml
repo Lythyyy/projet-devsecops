@@ -40,3 +40,9 @@ jobs:
           format: 'table'
           exit-code: '1'
           severity: 'CRITICAL,HIGH'
+
+      - name: Conftest
+        uses: open-policy-agent/conftest-action@v1.2.0
+        with:
+          files: k8s-deployment.yml
+          policy: policy/
