@@ -15,7 +15,7 @@ spec:
       securityContext:
         runAsNonRoot: true
       containers:
-      - name: flask-api
-        image: mon-api-flask:latest
-        ports:
-        - containerPort: 5000
+        - name: flask-api
+          image: mon-api-flask:latest
+          ports:
+            - containerPort: 5000
